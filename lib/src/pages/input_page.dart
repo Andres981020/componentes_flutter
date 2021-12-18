@@ -13,10 +13,11 @@ class _InputPage extends State<InputPage> {
   String _email = '';
   String _password = '';
   String _fecha = '';
+  String _opcionSeleccionada = 'Volar';
 
-  List<String> _poderes = ['Volar', 'Rayos X', 'Super Aliento', 'Super Fuerza'];
+  final List<String> _poderes = ['Volar', 'Rayos X', 'Super Aliento', 'Super Fuerza'];
 
-  TextEditingController _inputField = new TextEditingController();
+  final TextEditingController _inputField = new TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -70,6 +71,7 @@ class _InputPage extends State<InputPage> {
     return ListTile(
       title: Text('Nombre es: $_nombre '),
       subtitle: Text('Email es: $_email '),
+      trailing: Text(_opcionSeleccionada),
     );
   }
 
@@ -172,11 +174,23 @@ class _InputPage extends State<InputPage> {
   } 
 
   Widget _crearDropDown() {
-    return DropdownButton(
-      items: getOpcionesDropdown(), 
-      onChanged: (opt) {
-        print(opt);
-      } 
+    
+    return Row (
+      children: [
+        const Icon(Icons.select_all),
+        const SizedBox(width: 30.0,),
+        Expanded(
+          child: DropdownButton(
+            value: _opcionSeleccionada,
+            items: getOpcionesDropdown(), 
+            onChanged: (opt) {
+              setState(() {
+                _opcionSeleccionada = opt.toString();
+              });
+            } 
+          ),
+        ),
+      ],
     );
   }
 }
