@@ -17,7 +17,7 @@ class _InputPage extends State<InputPage> {
 
   final List<String> _poderes = ['Volar', 'Rayos X', 'Super Aliento', 'Super Fuerza'];
 
-  final TextEditingController _inputField = new TextEditingController();
+  final TextEditingController _inputField = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

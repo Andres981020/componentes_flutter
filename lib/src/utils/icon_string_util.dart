@@ -6,7 +6,8 @@ final _icons = <String, IconData> {
   'folder_open'      : Icons.folder_open,
   'donut_large'      : Icons.donut_large,
   'input'            : Icons.input,
-  'list'             : Icons.list,
+  'tune'             : Icons.tune,
+  'slow'             : Icons.build_circle_outlined,
 };
 
 Icon getIcon(String nombre) {

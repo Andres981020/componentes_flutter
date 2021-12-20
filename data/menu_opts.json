@@ -27,9 +27,14 @@
             "texto": "inputs"
         },
         {
-            "ruta" : "list",
-            "icon" : "list",
-            "texto": "Listas"
+            "ruta" : "slider",
+            "icon" : "tune",
+            "texto": "Slider - Checks"
+        },
+        {
+            "ruta" : "listviewbuilder",
+            "icon" : "slow",
+            "texto": "InfiniteScroll & Pull to refresh"
         }
     ]
 }
